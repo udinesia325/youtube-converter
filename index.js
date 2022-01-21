@@ -17,7 +17,7 @@ app.post("/download", async (req, res) => {
         const { videoDetails: { title } } = await ytdl.getInfo(url, { format: "mp3" })
         res.setHeader("Content-Disposition", `attachment; filename="${title}.mp3"`)
 
-        ytdl(url, { format: "mp3" }).pipe(res)
+        ytdl(url, { format: "mp3", quality:"lowest"}).pipe(res)
 
 
 
