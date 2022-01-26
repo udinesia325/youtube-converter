@@ -2,67 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YT downloader</title>
-    <style>
-        body {
-            background-color: rgb(56, 45, 70);
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        h1 {
-            text-align: center;
-            color: rgb(159, 151, 167);
-        }
-
-    .container {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-        }
-    input[type=text]{
-        border: 2px solid rgb(78, 74, 74);
-        padding: .5em;
-        font-size: 1em;
-        border-radius: 5px;
-        outline: none;
-    }
-    input[type=submit]{
-        background-color: white;
-        color: black;
-        padding: .5em;
-        border-radius: 8px;
-        border: 3px solid black;
-        transition: all .5s ease;
-    }
-    input[type=submit]:hover{
-        background-color:black;
-        color: white;
-        border: 3px solid white;
-        
-    }
-    p   {
-        text-align: center;
-        color: white;
-        margin-top: 12em;
-    }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT downloader</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <h1>Masukkan Url Video Di Sini</h1>
-    <div class="container">
+  <span>
+    Masukkan Url Di Sini
+  </span>
+  <canvas class="background"></canvas>
+  <div class="container">
 
-        <form action="/download" method="post">
-            <input type="text" name="url">
-            <input type="submit" value="submit">
-        </form>
-    </div>
-    <p>&copy; udinesia325</p>
+    <form action="/download" method="post" autocomplete="off">
+      <input type="text" name="url">
+      <input type="submit" value="Download">
+      <span class="footer">&copy; udinesia325</span>
+      <p>
+        Tanpa iklan , cepat dan anti redirect ke url gajelas !
+      </p>
+    </form>
+  </div>
+  <script>
+    window.onload = function() {
+      Particles.init
+      ({
+        selector: '.background',
+        color: "#fff",
+        maxParticles: 80
+      });
+    };
+
+  </script>
 </body>
 
 </html>
